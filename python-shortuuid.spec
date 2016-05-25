@@ -1,19 +1,12 @@
 #
-# This is template for pure python modules (noarch)
-# use template-specs/python-ext.spec for binary python packages
-#
-#
 # Conditional build:
-# %%bcond_with	doc	# don't build doc
 %bcond_without	tests	# do not perform "make test"
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-# NOTE: 'module' should match the python import path, not the egg name
 %define 	module	shortuuid
 Summary:	Generator library for concise, unambiguous and URL-safe UUIDs
 Summary(pl.UTF-8):	Biblioteka generacji jednoznacznych UUIDów dla URLi
-# Name must match the python module/package name (as on pypi or in 'import' statement)
 Name:		python-%{module}
 Version:	0.4.3
 Release:	1
@@ -112,9 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.rst
 %{py_sitescriptdir}/%{module}
-%if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
-%endif
 %endif
 
 %if %{with python3}
