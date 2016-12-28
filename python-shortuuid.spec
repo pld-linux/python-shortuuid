@@ -9,7 +9,7 @@ Summary:	Generator library for concise, unambiguous and URL-safe UUIDs
 Summary(pl.UTF-8):	Biblioteka generacji jednoznacznych UUIDów dla URLi
 Name:		python-%{module}
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/e9/41/d867be1470af87dd8af1b3462e5eae44f78ffd33cec54630d40ca6b2d0bd/shortuuid-%{version}.tar.gz
